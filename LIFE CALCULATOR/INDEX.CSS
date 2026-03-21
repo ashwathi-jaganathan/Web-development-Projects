@@ -1,0 +1,149 @@
+*{
+    box-sizing: border-box;
+    font-family: 'Times New Roman', Times, serif;
+}
+
+body
+{
+    margin: 0;
+    background: linear-gradient(to bottom right, rgb(71, 0, 121), rgb(99, 0, 0));
+    color: white;
+}
+
+.screen{
+    display: none;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    overflow: hidden;
+}
+
+.screen.active{
+    display: flex;
+}
+
+.box{
+    width: 90%;
+    max-width: 350px;
+    background: rgba(255, 255, 255, 0.15);
+    padding: 25px;
+    text-align: center;
+    border-radius: 20px;
+    box-shadow: 0 10px 25px rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(6px);
+    color: white;
+}
+
+input{
+    display: inline-block;
+    width: 90%;
+    padding: 12px 14px;
+    margin-bottom: 25px;
+    border-radius: 8px;
+    position: relative;
+    border: none;
+    font-size: 16px;
+
+}
+
+#proceed{
+    width: 50%;
+    background: #3b1464;
+    border-radius: 10px;
+    color: white;
+    margin-top: 10px;
+    border: 1px solid white;
+    padding: 5px;
+    font-size: 18px;
+    font-weight: 600;
+    cursor: pointer;
+    margin-bottom: 25px;
+    transition: 0.25s;
+}
+
+#count{
+    font-size: 80px;
+    font-weight: bold;
+}
+
+.main-card {
+  background: #ffffff15;
+  padding: 25px;
+  border-radius: 25px;
+  width: 95%;
+  max-width: 500px;
+  text-align: center;
+  transform: scale(0.88);
+  transform-origin: center;
+}
+
+.life-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  gap: 15px;
+  margin: 15px 0;
+}
+
+.life-box {
+  background: #2b0f52;
+  padding: 15px;
+  border-radius: 15px;
+}
+
+.life-box span {
+  display: block;
+  font-size: 26px;
+  font-weight: bold;
+  color: #7dd3fc;
+}
+
+.life-box small {
+  font-size: 15px;
+  opacity: 0.8;
+}
+
+.calculator {
+  background: #3b1464;
+  padding: 20px;
+  border-radius: 20px;
+  margin-top: 25px;
+}
+
+#calcDisplay {
+  width: 100%;
+  padding: 10px;
+  font-size: 20px;
+  border-radius: 12px;
+  margin-bottom: 25px;
+  border: none;
+  text-align: right;
+}
+
+.calc-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-template-rows: repeat(5, 1fr);
+  gap: 15px;
+}
+
+.calc-grid button {
+  padding: 10px;
+  border-radius: 12px;
+  border: none;
+  font-size: 18px;
+  font-weight: bold;
+  background: #2b0f52;
+  color: white;
+  cursor: pointer;
+  height: 100%;
+}
+
+.calc-grid .equal {
+  grid-column: 4;
+  grid-row: 5 / 6;
+  background: linear-gradient(135deg, #a855f7, #7c3aed);
+}
+
+.calc-grid .zero {
+  grid-column: span 2;
+}

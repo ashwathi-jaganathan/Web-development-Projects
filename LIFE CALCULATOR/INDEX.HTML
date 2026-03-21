@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1.0">
+    <title>Welcome Calculator</title>
+    <link rel="stylesheet" href="INDEX.CSS">
+</head>
+<body>
+    <div id="screen1" class="screen active">
+        <div class="box">
+            <h2 style="margin-bottom: 10px;">Life Calculator</h2>
+            <p style="margin-top: 0; margin-bottom: 30px;">Discover how much you've lived</p>
+            <input type="text" id="name" placeholder="Enter your name">
+            <input type="date" id="dob" placeholder="dd-mm-yyyy">
+            <button id="proceed" onclick="Proceed()">Proceed</button>
+        </div>
+    </div>
+    <div id="screen2" class="screen">
+        <div class="center">
+            <h1>Welcome <span id="displayName"></span>!</h1>
+        </div>
+    </div>
+    <div id="screen3" class="screen">
+        <div class="center">
+            <h1 id="count">3</h1>
+        </div>
+    </div>
+    <div id="screen4" class="screen">
+        <div class="main-card">
+            <h2>Hey <span id="displayName2"></span>!</h2>
+            <h3 style="margin-bottom: 30px;">You have lived...</h3>
+            <div class="life-grid">
+                <div class="life-box"><span id="y"></span><small>Years</small></div>
+                <div class="life-box"><span id="mo"></span><small>Months</small></div>
+                <div class="life-box"><span id="d"></span><small>Days</small></div>
+                <div class="life-box"><span id="h"></span><small>Hours</small></div>
+                <div class="life-box"><span id="mi"></span><small>Minutes</small></div>
+                <div class="life-box"><span id="s"></span><small>Seconds</small></div>
+            </div>
+            <div class="calculator">
+                <h2>Calculator</h2>
+                <input type="text" id="calcDisplay" value="0" readonly>
+                <div class="calc-grid">
+                    <button onclick="clearCalc()">C</button>
+                    <button onclick="backspace()">⌫</button>
+                    <button onclick="press('%')">%</button>
+                    <button class="op" onclick="press('/')">/</button>
+
+                    <button onclick="press('7')">7</button>
+                    <button onclick="press('8')">8</button>
+                    <button onclick="press('9')">9</button>
+                    <button class="op" onclick="press('*')">x</button>
+
+                    <button onclick="press('4')">4</button>
+                    <button onclick="press('5')">5</button>
+                    <button onclick="press('6')">6</button>
+                    <button class="op" onclick="press('-')">-</button>
+
+                    <button onclick="press('1')">1</button>
+                    <button onclick="press('2')">2</button>
+                    <button onclick="press('3')">3</button>
+                    <button class="op" onclick="press('+')">+</button>
+
+                    <button class="zero" onclick="press('0')">0</button>
+                    <button onclick="press('.')">.</button>
+                    <button class="equal" onclick="calculate()">=</button>
+                </div>
+            </div>
+        </div>
+    </div>
+<script src="INDEX.JS"></script>
+</body>
+</html>
